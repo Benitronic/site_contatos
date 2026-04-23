@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benicio Barbosa Cruz | Contato</title>
+  <title>Benicio Barbosa Cruz | Academic Profile</title>
+  <meta
+    name="description"
+    content="Página de contato e perfis acadêmicos de Benicio Barbosa Cruz, doutorando no ITA com atuação em robótica aérea, controle e sistemas multiagentes."
+  />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="page">
-
     <section class="hero">
       <div class="hero-left">
         <div class="top-brand">
           <img src="logo-ita.png" alt="Logo do ITA" class="ita-logo" />
         </div>
 
-        <p class="tag">PhD Student</p>
+        <p class="hero-kicker">PhD Student at ITA</p>
+
         <h1>Benicio Barbosa Cruz</h1>
+
+        <p class="hero-subtitle">
+          Aerial Robotics · Control Systems · Multi-Agent Systems
+        </p>
 
         <p class="description">
           Doutorando no Instituto Tecnológico de Aeronáutica (ITA), com atuação em
@@ -26,7 +35,9 @@
         </p>
 
         <div class="actions">
-          <button class="btn primary" onclick="copyEmail()">Enviar e-mail</button>
+          <button class="btn primary" type="button" onclick="copyEmail()">
+            Enviar e-mail
+          </button>
 
           <a
             class="btn"
@@ -41,7 +52,11 @@
 
       <div class="hero-right">
         <div class="photo-card">
-          <img src="foto-benicio.jpg" alt="Foto de Benicio Barbosa Cruz" class="profile-photo" />
+          <img
+            src="foto-benicio.jpg"
+            alt="Foto de Benicio Barbosa Cruz"
+            class="profile-photo"
+          />
         </div>
       </div>
     </section>
@@ -164,17 +179,29 @@
         </a>
       </div>
     </section>
-
   </main>
+
+  <div id="toast" class="toast" aria-live="polite">E-mail copiado com sucesso.</div>
 
   <script>
     function copyEmail() {
-      navigator.clipboard.writeText('faculdadebc1@gmail.com')
+      const email = 'faculdadebc1@gmail.com';
+      const toast = document.getElementById('toast');
+
+      navigator.clipboard.writeText(email)
         .then(function () {
-          alert('E-mail copiado: faculdadebc1@gmail.com');
+          toast.classList.add('show');
+          setTimeout(function () {
+            toast.classList.remove('show');
+          }, 2200);
         })
         .catch(function () {
-          alert('Não foi possível copiar automaticamente. E-mail: faculdadebc1@gmail.com');
+          toast.textContent = 'Não foi possível copiar automaticamente. E-mail: ' + email;
+          toast.classList.add('show');
+          setTimeout(function () {
+            toast.classList.remove('show');
+            toast.textContent = 'E-mail copiado com sucesso.';
+          }, 3200);
         });
     }
   </script>
