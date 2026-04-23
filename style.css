@@ -10,43 +10,62 @@ body {
 }
 
 .page {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 48px 20px 80px;
 }
 
 .hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 32px;
+  align-items: center;
   margin-bottom: 32px;
 }
 
-.badge {
+.hero-left {
+  min-width: 0;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.top-brand {
+  margin-bottom: 24px;
+}
+
+.ita-logo {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+.tag {
   display: inline-block;
-  padding: 10px 14px;
+  margin: 0 0 14px;
+  padding: 8px 14px;
   border: 1px solid #334155;
   border-radius: 999px;
   background: #0f172a;
   color: #cbd5e1;
   font-size: 14px;
-  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 48px;
   margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
   color: #ffffff;
 }
 
-.subtitle {
-  font-size: 24px;
-  color: #cbd5e1;
-  margin-top: 10px;
-}
-
 .description {
-  max-width: 800px;
+  max-width: 760px;
   line-height: 1.8;
   color: #cbd5e1;
   margin-top: 24px;
+  font-size: 16px;
 }
 
 .actions {
@@ -66,6 +85,12 @@ h1 {
   border-radius: 16px;
   cursor: pointer;
   font: inherit;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: #475569;
 }
 
 .btn.primary {
@@ -73,25 +98,108 @@ h1 {
   border-color: #2563eb;
 }
 
-.card {
+.btn.primary:hover {
+  background: #1d4ed8;
+}
+
+.photo-card {
+  width: 100%;
+  max-width: 320px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  background: #111827;
+}
+
+.section-card {
   background: #0f172a;
   border: 1px solid #1e293b;
   border-radius: 24px;
-  padding: 24px;
-  margin-bottom: 32px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.section-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.section-description {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .info-box {
   background: #020617;
   border: 1px solid #1e293b;
   border-radius: 18px;
-  padding: 16px;
-  margin-top: 16px;
+  padding: 18px;
 }
 
-.contacts h2,
-.card h2 {
+.info-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: #ffffff;
+  font-size: 18px;
+}
+
+.info-box p {
+  margin: 0;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.bio-short {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.bio-details {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+
+.bio-details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #93c5fd;
+  outline: none;
+}
+
+.bio-details[open] summary {
+  margin-bottom: 14px;
+}
+
+.bio-full p {
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin: 0 0 14px;
+}
+
+.bio-full p:last-child {
+  margin-bottom: 0;
 }
 
 .grid {
@@ -105,20 +213,67 @@ h1 {
   display: block;
   text-decoration: none;
   color: #e2e8f0;
-  background: #0f172a;
+  background: #020617;
   border: 1px solid #1e293b;
   border-radius: 20px;
   padding: 20px;
+  transition: 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: #334155;
 }
 
 .contact-card h3 {
   margin-top: 0;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
-.email-card {
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  font: inherit;
+.contact-card p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .photo-card {
+    max-width: 260px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 28px 16px 50px;
+  }
+
+  .section-card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
