@@ -6,7 +6,7 @@
   <title>Benicio Barbosa Cruz | Academic Profile</title>
   <meta
     name="description"
-    content="Página de contato e perfis acadêmicos de Benicio Barbosa Cruz, doutorando no ITA com atuação em robótica aérea, controle e sistemas multiagentes."
+    content="Página acadêmica de Benicio Barbosa Cruz, doutorando no ITA com atuação em robótica aérea, controle e sistemas multiagentes."
   />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
@@ -15,19 +15,26 @@
   <main class="page">
     <section class="hero">
       <div class="hero-left">
-        <div class="top-brand">
-          <img src="logo-ita.png" alt="Logo do ITA" class="ita-logo" />
+        <div class="top-row">
+          <div class="top-brand">
+            <img src="logo-ita.png" alt="Logo do ITA" class="ita-logo" />
+          </div>
+
+          <div class="language-switch" aria-label="Language selector">
+            <button id="lang-pt" class="lang-btn active" type="button" onclick="setLanguage('pt')">PT</button>
+            <button id="lang-en" class="lang-btn" type="button" onclick="setLanguage('en')">EN</button>
+          </div>
         </div>
 
-        <p class="hero-kicker">PhD Student at ITA</p>
+        <p class="hero-kicker" data-i18n="heroKicker">PhD Student at ITA</p>
 
         <h1>Benicio Barbosa Cruz</h1>
 
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
           Aerial Robotics · Control Systems · Multi-Agent Systems
         </p>
 
-        <p class="description">
+        <p class="description" data-i18n="heroDescription">
           Doutorando no Instituto Tecnológico de Aeronáutica (ITA), com atuação em
           robótica aérea, guiamento, navegação e controle de sistemas multiagentes,
           com foco em drones cooperativos, planejamento de trajetórias, controle preditivo
@@ -35,7 +42,7 @@
         </p>
 
         <div class="actions">
-          <button class="btn primary" type="button" onclick="copyEmail()">
+          <button class="btn primary" type="button" onclick="copyEmail()" data-i18n="emailButton">
             Enviar e-mail
           </button>
 
@@ -44,6 +51,7 @@
             href="https://wa.me/5579998654313"
             target="_blank"
             rel="noopener noreferrer"
+            data-i18n="whatsappButton"
           >
             Falar no WhatsApp
           </a>
@@ -62,25 +70,25 @@
     </section>
 
     <section class="section-card">
-      <h2>Sobre</h2>
+      <h2 data-i18n="aboutTitle">Sobre</h2>
 
       <div class="info-grid">
         <div class="info-box">
-          <h3>Instituição</h3>
-          <p>Instituto Tecnológico de Aeronáutica (ITA)</p>
+          <h3 data-i18n="institutionTitle">Instituição</h3>
+          <p data-i18n="institutionText">Instituto Tecnológico de Aeronáutica (ITA)</p>
         </div>
 
         <div class="info-box">
-          <h3>Área de atuação</h3>
-          <p>
+          <h3 data-i18n="areaTitle">Área de atuação</h3>
+          <p data-i18n="areaText">
             Robótica aérea, sistemas de controle, drones autônomos, cooperação multiagente,
             planejamento de trajetórias, guiamento, navegação e controle preditivo.
           </p>
         </div>
 
         <div class="info-box">
-          <h3>Interesses</h3>
-          <p>
+          <h3 data-i18n="interestsTitle">Interesses</h3>
+          <p data-i18n="interestsText">
             Robótica aérea, drones autônomos, controle preditivo, cooperação multiagente,
             sistemas embarcados e aplicações em sistemas cooperativos.
           </p>
@@ -89,38 +97,38 @@
     </section>
 
     <section class="section-card">
-      <h2>Biografia</h2>
+      <h2 data-i18n="bioTitle">Biografia</h2>
 
-      <p class="bio-short">
+      <p class="bio-short" data-i18n="bioShort">
         Pesquisador na área de Robótica Aérea e Sistemas de Controle. Atualmente, curso o
         Doutorado em Engenharia Aeroespacial e Mecânica, voltado para planejamento de trajetória
         e guiamento para equipes cooperativas de multidrones.
       </p>
 
-      <details class="bio-details">
-        <summary>Mostrar mais</summary>
+      <details class="bio-details" id="bio-details">
+        <summary id="bio-summary" data-i18n="showMore">Mostrar mais</summary>
         <div class="bio-full">
-          <p>
+          <p data-i18n="bioP1">
             Pesquisador na área de Robótica Aérea e Sistemas de Controle. Atualmente, curso o
             Doutorado em Engenharia Aeroespacial e Mecânica, voltado para planejamento de trajetória
             e guiamento para equipes cooperativas de multidrones.
           </p>
 
-          <p>
+          <p data-i18n="bioP2">
             Mestre em Engenharia Eletrônica e Computação no Instituto Tecnológico de Aeronáutica (ITA)
             (2023–2025), onde desenvolvi pesquisa em planejamento ótimo de trajetórias e tomada de decisão
             para equipes cooperativas de drones com alvos dinâmicos e recursos limitados, utilizando métodos
             baseados em Controle Preditivo.
           </p>
 
-          <p>
+          <p data-i18n="bioP3">
             Sou bacharel em Engenharia Elétrica pelo Instituto Federal de Sergipe (IFS) Campus Lagarto
             (2020–2023), com experiência em eletrônica digital e analógica e automação. Durante a graduação,
             participei de projetos de iniciação científica nas áreas de controle de processos, robótica
             educacional e comunicação subaquática, com resultados publicados em eventos científicos.
           </p>
 
-          <p>
+          <p data-i18n="bioP4">
             Faço parte do Laboratório de Robótica Aérea (LRA) do ITA e atuo como colaborador no Laboratório
             de Inovação e Criatividade (LABIC) do IFS. Tenho interesse em robótica aérea, drones autônomos,
             controle preditivo, cooperação multiagente e sistemas embarcados. Também possuo experiência prática
@@ -131,8 +139,8 @@
     </section>
 
     <section class="section-card">
-      <h2>Perfis acadêmicos</h2>
-      <p class="section-description">
+      <h2 data-i18n="profilesTitle">Perfis acadêmicos</h2>
+      <p class="section-description" data-i18n="profilesDescription">
         Abaixo estão os meus perfis acadêmicos e institucionais, onde compartilho produção científica,
         currículo e histórico acadêmico.
       </p>
@@ -144,8 +152,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3>Currículo Lattes</h3>
-          <p>Plataforma Lattes</p>
+          <h3 data-i18n="lattesTitle">Currículo Lattes</h3>
+          <p data-i18n="lattesText">Plataforma Lattes</p>
         </a>
 
         <a
@@ -155,7 +163,7 @@
           rel="noopener noreferrer"
         >
           <h3>ResearchGate</h3>
-          <p>Perfil de pesquisa</p>
+          <p data-i18n="researchgateText">Perfil de pesquisa</p>
         </a>
 
         <a
@@ -175,7 +183,7 @@
           rel="noopener noreferrer"
         >
           <h3>Google Scholar</h3>
-          <p>Perfil acadêmico</p>
+          <p data-i18n="scholarText">Perfil acadêmico</p>
         </a>
       </div>
     </section>
@@ -184,26 +192,140 @@
   <div id="toast" class="toast" aria-live="polite">E-mail copiado com sucesso.</div>
 
   <script>
+    const translations = {
+      pt: {
+        pageTitle: "Benicio Barbosa Cruz | Perfil Acadêmico",
+        metaDescription: "Página acadêmica de Benicio Barbosa Cruz, doutorando no ITA com atuação em robótica aérea, controle e sistemas multiagentes.",
+        heroKicker: "PhD Student at ITA",
+        heroSubtitle: "Robótica Aérea · Sistemas de Controle · Sistemas Multiagentes",
+        heroDescription: "Doutorando no Instituto Tecnológico de Aeronáutica (ITA), com atuação em robótica aérea, guiamento, navegação e controle de sistemas multiagentes, com foco em drones cooperativos, planejamento de trajetórias, controle preditivo e métodos baseados em otimização.",
+        emailButton: "Enviar e-mail",
+        whatsappButton: "Falar no WhatsApp",
+        aboutTitle: "Sobre",
+        institutionTitle: "Instituição",
+        institutionText: "Instituto Tecnológico de Aeronáutica (ITA)",
+        areaTitle: "Área de atuação",
+        areaText: "Robótica aérea, sistemas de controle, drones autônomos, cooperação multiagente, planejamento de trajetórias, guiamento, navegação e controle preditivo.",
+        interestsTitle: "Interesses",
+        interestsText: "Robótica aérea, drones autônomos, controle preditivo, cooperação multiagente, sistemas embarcados e aplicações em sistemas cooperativos.",
+        bioTitle: "Biografia",
+        bioShort: "Pesquisador na área de Robótica Aérea e Sistemas de Controle. Atualmente, curso o Doutorado em Engenharia Aeroespacial e Mecânica, voltado para planejamento de trajetória e guiamento para equipes cooperativas de multidrones.",
+        showMore: "Mostrar mais",
+        showLess: "Mostrar menos",
+        bioP1: "Pesquisador na área de Robótica Aérea e Sistemas de Controle. Atualmente, curso o Doutorado em Engenharia Aeroespacial e Mecânica, voltado para planejamento de trajetória e guiamento para equipes cooperativas de multidrones.",
+        bioP2: "Mestre em Engenharia Eletrônica e Computação no Instituto Tecnológico de Aeronáutica (ITA) (2023–2025), onde desenvolvi pesquisa em planejamento ótimo de trajetórias e tomada de decisão para equipes cooperativas de drones com alvos dinâmicos e recursos limitados, utilizando métodos baseados em Controle Preditivo.",
+        bioP3: "Sou bacharel em Engenharia Elétrica pelo Instituto Federal de Sergipe (IFS) Campus Lagarto (2020–2023), com experiência em eletrônica digital e analógica e automação. Durante a graduação, participei de projetos de iniciação científica nas áreas de controle de processos, robótica educacional e comunicação subaquática, com resultados publicados em eventos científicos.",
+        bioP4: "Faço parte do Laboratório de Robótica Aérea (LRA) do ITA e atuo como colaborador no Laboratório de Inovação e Criatividade (LABIC) do IFS. Tenho interesse em robótica aérea, drones autônomos, controle preditivo, cooperação multiagente e sistemas embarcados. Também possuo experiência prática como eletricista residencial.",
+        profilesTitle: "Perfis acadêmicos",
+        profilesDescription: "Abaixo estão os meus perfis acadêmicos e institucionais, onde compartilho produção científica, currículo e histórico acadêmico.",
+        lattesTitle: "Currículo Lattes",
+        lattesText: "Plataforma Lattes",
+        researchgateText: "Perfil de pesquisa",
+        scholarText: "Perfil acadêmico",
+        toastSuccess: "E-mail copiado com sucesso.",
+        toastFail: "Não foi possível copiar automaticamente. E-mail: faculdadebc1@gmail.com"
+      },
+      en: {
+        pageTitle: "Benicio Barbosa Cruz | Academic Profile",
+        metaDescription: "Academic webpage of Benicio Barbosa Cruz, PhD student at ITA working in aerial robotics, control, and multi-agent systems.",
+        heroKicker: "PhD Student at ITA",
+        heroSubtitle: "Aerial Robotics · Control Systems · Multi-Agent Systems",
+        heroDescription: "PhD student at the Instituto Tecnológico de Aeronáutica (ITA), working in aerial robotics, guidance, navigation, and control of multi-agent systems, with a focus on cooperative drones, trajectory planning, predictive control, and optimization-based methods.",
+        emailButton: "Send email",
+        whatsappButton: "Message on WhatsApp",
+        aboutTitle: "About",
+        institutionTitle: "Institution",
+        institutionText: "Aeronautics Institute of Technology (ITA)",
+        areaTitle: "Research area",
+        areaText: "Aerial robotics, control systems, autonomous drones, multi-agent cooperation, trajectory planning, guidance, navigation, and predictive control.",
+        interestsTitle: "Interests",
+        interestsText: "Aerial robotics, autonomous drones, predictive control, multi-agent cooperation, embedded systems, and cooperative system applications.",
+        bioTitle: "Biography",
+        bioShort: "Researcher in Aerial Robotics and Control Systems. I am currently pursuing a PhD in Aerospace and Mechanical Engineering, focused on trajectory planning and guidance for cooperative multi-drone teams.",
+        showMore: "Show more",
+        showLess: "Show less",
+        bioP1: "Researcher in Aerial Robotics and Control Systems. I am currently pursuing a PhD in Aerospace and Mechanical Engineering, focused on trajectory planning and guidance for cooperative multi-drone teams.",
+        bioP2: "I hold an MSc in Electronic and Computer Engineering from the Instituto Tecnológico de Aeronáutica (ITA) (2023–2025), where I developed research on optimal trajectory planning and decision-making for cooperative drone teams with dynamic targets and limited resources, using Model Predictive Control-based methods.",
+        bioP3: "I received a bachelor's degree in Electrical Engineering from the Instituto Federal de Sergipe (IFS), Lagarto campus (2020–2023), with experience in digital and analog electronics and automation. During my undergraduate studies, I took part in scientific initiation projects in process control, educational robotics, and underwater communication, with results published in scientific events.",
+        bioP4: "I am a member of the Aerial Robotics Laboratory (LRA) at ITA and also collaborate with the Innovation and Creativity Laboratory (LABIC) at IFS. My interests include aerial robotics, autonomous drones, predictive control, multi-agent cooperation, and embedded systems. I also have practical experience as a residential electrician.",
+        profilesTitle: "Academic profiles",
+        profilesDescription: "Below are my academic and institutional profiles, where I share scientific output, curriculum information, and academic history.",
+        lattesTitle: "Lattes CV",
+        lattesText: "Lattes Platform",
+        researchgateText: "Research profile",
+        scholarText: "Academic profile",
+        toastSuccess: "Email copied successfully.",
+        toastFail: "Could not copy automatically. Email: faculdadebc1@gmail.com"
+      }
+    };
+
+    let currentLanguage = "pt";
+
+    function applyTranslations(lang) {
+      currentLanguage = lang;
+      const dict = translations[lang];
+
+      document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+      document.title = dict.pageTitle;
+      document.querySelector('meta[name="description"]').setAttribute("content", dict.metaDescription);
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (dict[key]) {
+          element.textContent = dict[key];
+        }
+      });
+
+      updateSummaryText();
+
+      const toast = document.getElementById("toast");
+      if (!toast.classList.contains("show")) {
+        toast.textContent = dict.toastSuccess;
+      }
+
+      document.getElementById("lang-pt").classList.toggle("active", lang === "pt");
+      document.getElementById("lang-en").classList.toggle("active", lang === "en");
+    }
+
+    function updateSummaryText() {
+      const bioDetails = document.getElementById("bio-details");
+      const bioSummary = document.getElementById("bio-summary");
+      const dict = translations[currentLanguage];
+      bioSummary.textContent = bioDetails.open ? dict.showLess : dict.showMore;
+    }
+
+    function setLanguage(lang) {
+      applyTranslations(lang);
+      localStorage.setItem("siteLanguage", lang);
+    }
+
     function copyEmail() {
-      const email = 'faculdadebc1@gmail.com';
-      const toast = document.getElementById('toast');
+      const email = "faculdadebc1@gmail.com";
+      const toast = document.getElementById("toast");
+      const dict = translations[currentLanguage];
 
       navigator.clipboard.writeText(email)
         .then(function () {
-          toast.classList.add('show');
+          toast.textContent = dict.toastSuccess;
+          toast.classList.add("show");
           setTimeout(function () {
-            toast.classList.remove('show');
+            toast.classList.remove("show");
           }, 2200);
         })
         .catch(function () {
-          toast.textContent = 'Não foi possível copiar automaticamente. E-mail: ' + email;
-          toast.classList.add('show');
+          toast.textContent = dict.toastFail;
+          toast.classList.add("show");
           setTimeout(function () {
-            toast.classList.remove('show');
-            toast.textContent = 'E-mail copiado com sucesso.';
+            toast.classList.remove("show");
+            toast.textContent = dict.toastSuccess;
           }, 3200);
         });
     }
+
+    document.getElementById("bio-details").addEventListener("toggle", updateSummaryText);
+
+    const savedLanguage = localStorage.getItem("siteLanguage") || "pt";
+    applyTranslations(savedLanguage);
   </script>
 </body>
 </html>
